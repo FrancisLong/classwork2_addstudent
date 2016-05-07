@@ -12,7 +12,7 @@ public class CategoryAction extends ActionSupport {
 
 	private static final long serialVersionUID = 1L;
 	private String name;
-	private Integer code;
+	private String code;
 	
 	private ICategoryService categoryService = new CategoryServiceImpl();
 	
@@ -38,10 +38,11 @@ public class CategoryAction extends ActionSupport {
 	/**
 	 * 添加栏目
 	 * */
-	@Action(value="addCategory")
-	public void addCategory(){
-		Category category = new Category(name, code);
+@Action(value="addCategory",results={@Result(name="success",location="/WEB-INF/jsp/manager/addCategorySuccess.jsp")})
+	public String addCategory(){
+		Category category = new Category( name, code);
 		categoryService.add(category);
+		return "success";
 	}
 
 	public String getName() {
@@ -52,11 +53,11 @@ public class CategoryAction extends ActionSupport {
 		this.name = name;
 	}
 
-	public Integer getCode() {
+	public String getCode() {
 		return code;
 	}
 
-	public void setCode(Integer code) {
+	public void setCode(String code) {
 		this.code = code;
 	}
 }

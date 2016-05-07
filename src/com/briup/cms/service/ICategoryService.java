@@ -5,7 +5,8 @@ import java.util.List;
 import com.briup.cms.bean.Category;
 
 /**
- * 栏目管理的业务逻辑
+ * 栏目管理的业务逻辑（接口）
+ * 定义系统功能
  * */
 public interface ICategoryService {
 	//添加栏目

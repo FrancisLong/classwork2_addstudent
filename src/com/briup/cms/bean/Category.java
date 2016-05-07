@@ -5,27 +5,29 @@ package com.briup.cms.bean;
 public class Category {
 	private Long id;
 	private String name;
-	private Integer code;
+	private String code;
 	
 	public Category() {
 		
 	}
-	public Category(String name, Integer code) {
+	public Category(String name, String code) {
 		super();
+		
 		this.name = name;
 		this.code = code;
 	}
-	
+
+
 	public String getName() {
 		return name;
 	}
 	public void setName(String name) {
 		this.name = name;
 	}
-	public Integer getCode() {
+	public String getCode() {
 		return code;
 	}
-	public void setCode(Integer code) {
+	public void setCode(String code) {
 		this.code = code;
 	}
 	public Long getId() {

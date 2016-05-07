@@ -11,7 +11,7 @@ public class BaseAction extends ActionSupport {
 	/**
 	 * 跳转到后台首页
 	 * ip:port/命名空间/url
-	 * http://localhost:8888/manager/toIndex.action
+	 * http://localhost:8080/cms/manager/toIndex.action
 	 * */
 	@Action(value="toIndex",results={
 			@Result(name="success",location="/WEB-INF/jsp/manager/index.jsp")})

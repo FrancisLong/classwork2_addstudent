@@ -1,8 +1,6 @@
 package com.briup.cms.web.action.manager;
-
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Result;
-
 import com.briup.cms.bean.Category;
 import com.briup.cms.service.ICategoryService;
 import com.briup.cms.service.impl.CategoryServiceImpl;
@@ -42,7 +40,7 @@ public class CategoryAction extends ActionSupport {
 	public String addCategory(){
 		Category category = new Category( name, code);
 		categoryService.add(category);
-		return "success";
+		return SUCCESS;
 	}
 
 	public String getName() {

@@ -18,7 +18,7 @@ public class StudentAction extends ActionSupport{
 	private int number;
 	private IStudentService studentService = new StudentServiceImpl();
 	
-	/*@Action(value="toAddStudent",
+	@Action(value="toAddStudent",
 			results={@Result(name="success",location="/WEB-INF/jsp/manager/addStudent.jsp")})
 	public String toAddStudent(){
 		return SUCCESS;//"success"
@@ -29,7 +29,7 @@ public class StudentAction extends ActionSupport{
 		Student student = new Student((Long) null,name, number);
 		studentService.add(student);
 		return SUCCESS;
-	}*/
+	}
 
 	public String getName() {
 		return name;

@@ -1,6 +1,7 @@
 package com.briup.cms.web.action.manager;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Result;
+
 import com.briup.cms.bean.Category;
 import com.briup.cms.service.ICategoryService;
 import com.briup.cms.service.impl.CategoryServiceImpl;
@@ -32,7 +33,6 @@ public class CategoryAction extends ActionSupport {
 	public String toCategoryManager(){
 		return SUCCESS;//"success"
 	}
-	
 	/**
 	 * 添加栏目
 	 * */
@@ -42,7 +42,10 @@ public class CategoryAction extends ActionSupport {
 		categoryService.add(category);
 		return SUCCESS;
 	}
-
+	@Action("test")
+	public void test(){
+		System.out.println("tttt");
+	}
 	public String getName() {
 		return name;
 	}
